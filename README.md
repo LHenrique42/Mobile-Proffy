@@ -56,7 +56,7 @@ This project was made using the follow technologies:
 
 * [Typescript](https://www.typescriptlang.org/)      
 * [React](https://reactjs.org/)  
-* [React Native] (https://reactnative.dev/)
+* [React Native](https://reactnative.dev/)
 * [Expo](https://expo.io/)       
 * [Express](https://expressjs.com/)      
 
