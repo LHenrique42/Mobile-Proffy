@@ -7,8 +7,22 @@ import unfavoriteIcon from '../../assets/images/icons/unfavorite.png'
 import whatsappIcon from '../../assets/images/icons/whatsapp.png'
 
 import styles from './styles'
+export interface Teacher 
+{
+    avatar: string,
+    bio: string,
+    cost: number,
+    id: number,
+    name: string,
+    subject: string,
+    whatsapp: string,
+};
 
-function TeacherItem() {
+interface TeacherItemProps {
+    teacher: Teacher;
+}
+
+const TeacherItem:React.FC<TeacherItemProps> = ({ teacher }) => {
     return (
         <View 
             style={styles.container}
@@ -18,7 +32,7 @@ function TeacherItem() {
             >
                 <Image 
                     style={styles.avatar} 
-                    source={{ uri: 'https://github.com/lhenrique42.png'}}
+                    source={{ uri: teacher.avatar}}
                 />
 
                 <View 
@@ -27,12 +41,12 @@ function TeacherItem() {
                     <Text 
                         style={styles.name}
                     >
-                        Henrique
+                        {teacher.name}
                     </Text>
                     <Text 
                         style={styles.subject}
                     >
-                        Programação
+                        {teacher.subject}
                     </Text>
                 </View>
             </View>
@@ -40,16 +54,14 @@ function TeacherItem() {
             <Text 
                 style={styles.bio}
             >
-                Entusiastas das melhores tecnologias de programação avançada.
-                {'\n'}{'\n'}
-                Apaixonado por criar bugs e não seguir as melhores práticas de programação.
+                {teacher.bio}
             </Text>
 
             <View style={styles.footer}>
                 <Text style={styles.price}>
                     Preço/hora {'   '}
                     <Text style={styles.priceValue}>
-                        R$20,00
+                        R$ {teacher.cost}
                     </Text>
                 </Text>
 
