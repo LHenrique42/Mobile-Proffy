@@ -55,7 +55,8 @@
 This project was made using the follow technologies:
 
 * [Typescript](https://www.typescriptlang.org/)      
-* [React](https://reactjs.org/)      
+* [React](https://reactjs.org/)  
+* [React Native] (https://reactnative.dev/)
 * [Expo](https://expo.io/)       
 * [Express](https://expressjs.com/)      
 
@@ -65,7 +66,7 @@ This project was made using the follow technologies:
 
 # :construction_worker: How to run
 
-To run this application it's necessary to clone this repository and the [backend api](!https://github.com/LHenrique42/Backend-Proffy) repository. Then run the backend and then the frontend application.
+To run this application it's necessary to clone this repository and the [backend api](https://github.com/LHenrique42/Backend-Proffy) repository. Then run the backend and then the frontend application.
 
 ```bash
 # Clone Repository
