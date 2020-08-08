@@ -8,6 +8,7 @@ import whatsappIcon from '../../assets/images/icons/whatsapp.png'
 import AsyncStorage from '@react-native-community/async-storage'
 
 import styles from './styles'
+import api from '../../services/api';
 export interface Teacher 
 {
     avatar: string,
@@ -29,7 +30,10 @@ const TeacherItem:React.FC<TeacherItemProps> = ({ teacher, favorited }) => {
     const [ isFavorited, setIsFavorited ] = useState(favorited);
 
     function handleLinkToWhatsapp() {
-        Linking.openURL(`whatsapp://send?phone=${teacher.whatsapp}`)
+        api.post('connections', {
+            user_id: teacher.id,
+        })
+        Linking.openURL(`whatsapp://send?phone=${teacher.whatsapp}`);
     }
 
     async function handleToggleFavorite() {
